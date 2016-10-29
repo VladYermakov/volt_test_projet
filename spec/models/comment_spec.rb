@@ -1,6 +1,4 @@
-require 'rails_helper'
-
-RSpec.describe Comment, type: :model do
+describe Comment do
 
   let(:user) { FactoryGirl.create(:user) }
   let(:post) { FactoryGirl.create(:post) }

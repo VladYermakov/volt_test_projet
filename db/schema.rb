@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20161026084358) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "auth_token"
+    t.integer  "posts_count"
+    t.integer  "comments_count"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.index ["auth_token"], name: "index_users_on_auth_token", unique: true, using: :btree

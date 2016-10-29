@@ -22,6 +22,7 @@ gem 'will_paginate', '~> 3.1.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'simplecov'
 end
 
 group :development do

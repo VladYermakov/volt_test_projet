@@ -4,8 +4,8 @@ class User < ApplicationRecord
                        length: { minimum: 3 }
   validates :email,    presence: true,
                        format: { with: URI::MailTo::EMAIL_REGEXP },
-                       uniqueness: true
-  validates :password, length: { minimum: 8 }
+                       uniqueness: { case_sensitive: false }
+  validates :password, length: { minimum: 8 }, :if => -> { password_digest.nil?}
 
   before_save { email.downcase! }
 

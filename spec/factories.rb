@@ -11,7 +11,7 @@ FactoryGirl.define do
 
   factory :post do
 
-    title 'post'
+    sequence(:title) { |n| "post #{n}" }
     body 'Lorem ipsum'
     author
 
