@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  match '/',                   to: 'avatars#edit',   via: :get
+  match '/',                   to: 'avatars#update', via: :put
+  match '/avatar/:id/(:size)', to: 'avatars#show',   via: :get
+
   namespace :api do
     namespace :v1 do
-      match '/login',     to: 'sessions#create', via: :pos
+      match '/login',     to: 'sessions#create', via: :post
 
       match '/posts',     to: 'posts#index',  via:  :get
       match '/posts/:id', to: 'posts#show',   via:  :get

@@ -1,0 +1,2 @@
+describe AvatarsController do
+end

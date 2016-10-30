@@ -1,0 +1,8 @@
+<%= form_tag '/', method: :put, multipart: true do %>
+  <%= label_tag :auth_token %>
+  <%= text_field_tag :auth_token %>
+
+  <%= file_field_tag :avatar %>
+
+  <%= submit_tag %>
+<% end %>
