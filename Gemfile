@@ -25,6 +25,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'simplecov'
   gem 'factory_girl_rails'
+  gem 'dotenv-rails'
 end
 
 group :development do

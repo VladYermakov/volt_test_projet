@@ -15,13 +15,7 @@ class User < ApplicationRecord
   has_secure_password
   has_secure_token :auth_token
 
-  has_attached_file :avatar, styles: { medium: '500x500>', preview: '300x300>' },
-                    storage:         :s3,
-                    s3_region:       'us-west-1',
-                    s3_credentials:  "#{Rails.root}/config/s3.yml",
-                    s3_protocol:     'https',
-                    bucket:          'yermakov.test.volt',
-                    s3_host_name:    's3-us-west-1.amazonaws.com'
+  has_attached_file :avatar, styles: { medium: '500x500>', preview: '300x300>' }
 
   validates_attachment :avatar, content_type: { content_type: /\Aimage\/.*\z/i }
   #do_not_validate_attachment_file_type :avatar
