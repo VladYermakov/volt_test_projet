@@ -1,0 +1,132 @@
+@import "bootstrap";
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+  background-color: #FFB958;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input, textarea, select, .uneditable-input {
+  border: none;
+  width: 100%;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  @include box_sizing;
+  outline: none;
+}
+
+.input-form-border {
+  padding: 12px 10px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
+.container {
+  width: 700px;
+  background-color: #fff;
+  padding: 0;
+
+  .row {
+    width: 500px;
+    margin: 0 100px;
+    padding: 50px 0;
+    text-align: center;
+
+    img {
+      z-index: 100;
+    }
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #EAEAEA;
+  color: #999999;
+  a {
+    color: #555555;
+
+    &:hover {
+      color: #222222;
+    }
+
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #4682B4;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+
+  &:hover {
+    color: #4682B4;
+    text-decoration: none;
+  }
+}
+
+.navbar-inverse {
+  background-color: #fff;
+  border: none;
+  z-index: 1000;
+  box-shadow: 0 0 10px #FFB958;
+}
+
+.btn-save {
+  background-color: #4682B4;
+}

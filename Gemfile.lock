@@ -44,6 +44,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    autoprefixer-rails (6.3.6.2)
+      execjs
     aws-sdk (2.6.14)
       aws-sdk-resources (= 2.6.14)
     aws-sdk-core (2.6.14)
@@ -51,6 +53,9 @@ GEM
     aws-sdk-resources (2.6.14)
       aws-sdk-core (= 2.6.14)
     bcrypt (3.1.11-x86-mingw32)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -211,6 +216,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   aws-sdk
   bcrypt (~> 3.1.7)
+  bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.2)
   dotenv-rails

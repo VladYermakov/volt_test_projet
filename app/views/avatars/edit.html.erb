@@ -1,8 +1,14 @@
-<%= form_tag '/', method: :put, multipart: true do %>
-  <%= label_tag :auth_token %>
-  <%= text_field_tag :auth_token %>
+<div class="row">
+  <div>
+    <%= form_tag '/', method: :put, multipart: true do %>
+      <div class="input-form-border">
+        <%= text_field_tag :auth_token, nil, placeholder: 'auth_token' %>
+      </div>
+      <div class="input-form-border">
+        <%= file_field_tag :avatar %>
+      </div>
 
-  <%= file_field_tag :avatar %>
-
-  <%= submit_tag %>
-<% end %>
+      <%= submit_tag 'Change avatar', class: 'btn btn-primary btn-save' %>
+    <% end %>
+  </div>
+</div>

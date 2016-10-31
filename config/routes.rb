@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       match '/login',     to: 'sessions#create', via: :post
+      match '/users/new', to: 'users#create',    via: :post
 
       match '/posts',     to: 'posts#index',  via:  :get
       match '/posts/:id', to: 'posts#show',   via:  :get

@@ -1,7 +1,7 @@
 class AvatarsController < ApplicationController
 
   def show
-    @size = (params[:size] || 'original').to_sym
+    @size = (params[:size] || 'medium_crop').to_sym
     @user = User.find_by id: params[:id]
   end
 

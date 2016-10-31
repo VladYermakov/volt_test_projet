@@ -2,9 +2,7 @@ describe Api::V1::SessionsController do
 
   before do
     @user = User.create nickname: 'vlad', email: 'yermakov.v.o@gmail.com',
-                        password: '123123123',
-                        password_confirmation: '123123123'
-
+                        password: '123123123'
   end
 
   describe 'GET #create' do

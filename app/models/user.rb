@@ -15,8 +15,15 @@ class User < ApplicationRecord
   has_secure_password
   has_secure_token :auth_token
 
-  has_attached_file :avatar, styles: { medium: '500x500>', preview: '300x300>' }
+  has_attached_file :avatar, styles: {
+    :original     => '100%',
+    :half         => '50%',
+    :medium       => '500x500>',
+    :medium_crop  => '500x500#',
+    :preview      => '300x300>',
+    :preview_crop => '300x300#'
+  }
 
   validates_attachment :avatar, content_type: { content_type: /\Aimage\/.*\z/i }
-  #do_not_validate_attachment_file_type :avatar
+
 end
