@@ -7,7 +7,7 @@ Paperclip::Attachment.default_options.merge!({
   :s3_host_name   => 's3-us-west-1.amazonaws.com'
 })
 
-Paperclip.options[:command_path] = 'C:\Program Files\ImageMagick-7.0.3-Q16'
+Paperclip.options[:command_path] = 'C:\Program Files\ImageMagick-7.0.3-Q16' if Rails.env.development?
 
 module Paperclip
   class MediaTypeSpoofDetector
