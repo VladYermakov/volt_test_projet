@@ -1,0 +1,2 @@
+class ImagePreview < ApplicationRecord
+end
