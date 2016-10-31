@@ -1,6 +1,6 @@
 ActionMailer::Base.smtp_settings = {
-  address:        'smtp.sendgrid.com',
-  port:           '587',
+  address:        'smtp.gmail.com',
+  port:           '465',
   domain:         ENV['domain'],
   authentication: :plain,
   user_name:      ENV['username'],
