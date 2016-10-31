@@ -1,10 +1,9 @@
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.smtp_settings = {
-  :address              => 'smtp.gmail.com',
-  :port                 => 587,
-  :domain               => ENV['domain'],
-  :authentication       => :plain,
-  :user_name            => ENV['username'],
-  :password             => ENV['password'],
-  :enable_starttls_auto => true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  :user_name      => 'a9bb3ca5950f8b',
+  :password       => 'b93ddddcf60351',
+  :address        => 'mailtrap.io',
+  :domain         => 'mailtrap.io',
+  :port           => '2525',
+  :authentication => :cram_md5
 }
